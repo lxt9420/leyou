@@ -1,0 +1,50 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: ly-zull
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+zuul:
+  prefix:  /api
+  routes:
+     ly-item-service: /item/**
+     search-service:  /search/**
+     user-service:    /user/**
+     auth-service:   /auth/**  # 授权中心微服务
+     cart-service:   /cart/**
+     order-service:  /order/**
+     upload-service:
+        path: /upload/**
+        serviceId: upload-service
+        strip-prefix: false
+  add-host-header: true
+  sensitive-headers:
+leyou:
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/code
+      - /api/item
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ConnectTimeout: 1000 #请求连接的超时时间
+  ReadTimeout: 3500 #请求处理的超时时间
+  MaxAutoRetries: 0 #最大重试次数，当Eureka中可以找到服务，但是服务连不上时将会重试
+  MaxAutoRetriesNextServer: 0 #切换实例的重试次数
+ly:
+  jwt:
+    pubKeyPath:  D:\\tmp\\rsa\\rsa.pub # 公钥地址
+    cookieName: LY_TOKEN # cookie的名称
+

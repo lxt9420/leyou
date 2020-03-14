@@ -1,0 +1,76 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.leyou.config.JwtProperties",
+      "name": "leyou.jwt",
+      "type": "com.leyou.config.JwtProperties"
+    },
+    {
+      "sourceType": "com.leyou.config.PayProperties",
+      "name": "leyou.pay",
+      "type": "com.leyou.config.PayProperties"
+    },
+    {
+      "sourceType": "com.leyou.config.IdWorkerProperties",
+      "name": "leyou.worker",
+      "type": "com.leyou.config.IdWorkerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.leyou.config.JwtProperties",
+      "name": "leyou.jwt.cookie-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.config.JwtProperties",
+      "name": "leyou.jwt.pub-key-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.config.JwtProperties",
+      "name": "leyou.jwt.public-key",
+      "type": "java.security.PublicKey"
+    },
+    {
+      "sourceType": "com.leyou.config.PayProperties",
+      "name": "leyou.pay.app-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.config.PayProperties",
+      "defaultValue": 0,
+      "name": "leyou.pay.connect-timeout-ms",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.leyou.config.PayProperties",
+      "name": "leyou.pay.key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.config.PayProperties",
+      "name": "leyou.pay.mch-id",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.config.PayProperties",
+      "defaultValue": 0,
+      "name": "leyou.pay.read-timeout-ms",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.leyou.config.IdWorkerProperties",
+      "defaultValue": 0,
+      "name": "leyou.worker.datacenter-id",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.leyou.config.IdWorkerProperties",
+      "defaultValue": 0,
+      "name": "leyou.worker.worker-id",
+      "type": "java.lang.Long"
+    }
+  ]
+}

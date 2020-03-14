@@ -1,0 +1,44 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ly-item-service
+  datasource:
+    #driver-class-name: com.mysql.jdbc.Driver
+    url:  jdbc:mysql://192.168.56.8:3306/heima?useUnicode=true&amp;characterEncoding=utf8
+    username:  root
+    password: 123456
+    hikari:
+          maximum-pool-size: 30
+          minimum-idle: 10
+  cloud:        #必须要加，不然服务起不来
+    refresh:
+      refreshable:
+  rabbitmq:
+    host: 192.168.56.8
+    username: /leyou
+    password: leyou
+    virtual-host: /leyou
+    template:
+      retry:
+        enabled: true
+        initial-interval:  10000ms
+        max-interval:  3000ms
+        multiplier: 2
+      exchange: ly.item.exchange
+    publisher-confirms: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+# 通用 Mapper 配置
+mapper:
+  identity: MYSQL
+  not-empty: false
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

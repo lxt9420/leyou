@@ -1,0 +1,37 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.leyou.zuul.confg.FilterProperties",
+      "name": "leyou.filter",
+      "type": "com.leyou.zuul.confg.FilterProperties"
+    },
+    {
+      "sourceType": "com.leyou.zuul.confg.JwtProperties",
+      "name": "ly.jwt",
+      "type": "com.leyou.zuul.confg.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.leyou.zuul.confg.FilterProperties",
+      "name": "leyou.filter.allow-paths",
+      "type": "java.util.List<java.lang.String>"
+    },
+    {
+      "sourceType": "com.leyou.zuul.confg.JwtProperties",
+      "name": "ly.jwt.cookie-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.zuul.confg.JwtProperties",
+      "name": "ly.jwt.pub-key-path",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.leyou.zuul.confg.JwtProperties",
+      "name": "ly.jwt.public-key",
+      "type": "java.security.PublicKey"
+    }
+  ]
+}
