@@ -12,7 +12,7 @@ spring:
     host: 192.168.56.8
 ly:
   sms:
-    accessKeyId: LTAI4FsqTobFKnMtG7SdGqm1
-    AccessKeySecret: nH2xC224yVrlfevOV6LfA7ZVtriVVN
-    signName: 陆天农家乐
-    verifyCodeTemplate: SMS_184220672
+    accessKeyId: 
+    AccessKeySecret: 
+    signName: 
+    verifyCodeTemplate: 
